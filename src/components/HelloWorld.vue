@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h1>我们的Landing Page</h1>
+    <h1>我们的主页</h1>
   </div>
 </template>
 

@@ -1,13 +1,17 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h1>我们的主页</h1>
+    <Banner />
   </div>
 </template>
 
 <script>
+import Banner from "./Banner";
+
 export default {
   name: 'HelloWorld',
+  components: {
+      Banner
+  },
   props: {
     msg: String
   }

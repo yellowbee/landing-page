@@ -32,16 +32,20 @@
       @sliding-end="onSlideEnd"
     >
       <!-- Text slides with image -->
-      <b-carousel-slide caption text img-src="../assets/banner/hoop.jpg"></b-carousel-slide>
+      <!-- <b-carousel-slide caption text img-src="../assets/banner/hoop.jpg"></b-carousel-slide> -->
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="../assets/banner/subway.jpeg">
-        <h1>Hello world!</h1>
+      <b-carousel-slide img-src="../assets/banner/tiger.jpg">
+        <div class="banner-text">
+          <div class="text-big">洞悉用户需求，结合前沿技术 --- 助您成功完成数字化转型</div>
+          <br />
+          <div class="text-small">我们致力于为中国制造2025提供专业数字产品开发服务</div>
+        </div>
       </b-carousel-slide>
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide>
+      <!-- <b-carousel-slide>
         <template v-slot:img>
           <img
             class="d-block img-fluid w-100"
@@ -51,7 +55,7 @@
             alt="image slot"
           />
         </template>
-      </b-carousel-slide>
+      </b-carousel-slide> -->
     </b-carousel>
 
     <!-- <p class="mt-4">
@@ -100,5 +104,23 @@ export default {
 .menu-item {
   margin: 0 3%;
   display: inline-block;
+}
+
+.text-big {
+  font-size: 2em;
+}
+.text-small {
+  font-size: 1em;
+}
+
+@media (max-width: 767.98px) {
+  .banner-text {
+  }
+  .text-big {
+    font-size: 1em;
+  }
+  .text-small {
+    font-size: 0.5em;
+  }
 }
 </style>

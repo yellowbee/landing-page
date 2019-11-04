@@ -4,6 +4,9 @@
     <br />
     <br />
     <Services />
+    <br />
+    <br />
+    <Contact />
     <div style="padding: 3rem 0;">footer</div>
   </div>
 </template>
@@ -12,12 +15,14 @@
 // import HelloWorld from "./components/HelloWorld.vue";
 import Services from "./components/Services";
 import Banner from "./components/Banner";
+import Contact from "./components/Contact";
 
 export default {
   name: "app",
   components: {
     Banner,
-    Services
+    Services,
+    Contact
   }
 };
 </script>

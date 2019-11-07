@@ -1,6 +1,7 @@
 <template>
   <section>
     <h2 class="header mb-4" v-scroll-reveal>我们提供如下服务</h2>
+    <br/>
     <ul class="service-container">
       <li
         class="service"
@@ -10,6 +11,7 @@
       >
         <div class="service-box">
           <img :src="service.imageName" width="100" :alt="service.title" />
+          <br />
           <h2>{{service.title}}</h2>
           <p>{{service.content}}</p>
         </div>
@@ -90,18 +92,23 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin-top: -1rem;
+  padding: 0 0.5rem;
 }
 
 .service {
   display: flex;
   width: 25%;
-  padding: 0 1rem;
   visibility: hidden;
 }
 
 .service-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
   width: 100%;
-  margin-top: 1rem;
+  margin: 0.5rem;
   padding: 0 1rem;
   background: #f5f5f5;
   transition: all 0.75s ease 0s;
@@ -110,10 +117,12 @@ export default {
 
 .service:nth-child(odd) .service-box:hover {
   background: #e3e1d3;
+  transform: scale(1.02);
 }
 
 .service:nth-child(even) .service-box:hover {
   background: #e0cece;
+  transform: scale(1.02);
 }
 
 @media (max-width: 767.98px) {

@@ -6,23 +6,27 @@
     <Services />
     <br />
     <br />
+    <DemoProjects />
+    <br />
+    <br />
     <Contact />
     <div style="padding: 3rem 0;">footer</div>
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
 import Services from "./components/Services";
 import Banner from "./components/Banner";
 import Contact from "./components/Contact";
+import DemoProjects from "./components/DemoProjects";
 
 export default {
   name: "app",
   components: {
     Banner,
     Services,
-    Contact
+    Contact,
+    DemoProjects
   }
 };
 </script>

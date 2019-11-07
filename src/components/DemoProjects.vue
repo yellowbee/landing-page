@@ -21,7 +21,7 @@
             <br />
             <p>{{project.content}}</p>
             <br />
-            <button class="btn btn-secondary demo-project__more">了解更多</button>
+            <button class="btn btn-link demo-project__more">了解更多 &gt;</button>
           </div>
         </div>
       </li>

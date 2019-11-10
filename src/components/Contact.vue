@@ -15,16 +15,15 @@
             </b-form-group>
             <b-form-group
                     id="input-group-2"
-                    label="邮箱地址"
+                    label="手机号码"
                     label-for="input-2"
                     description=""
             >
                 <b-form-input
                         id="input-2"
-                        v-model="form.email"
-                        type="email"
+                        v-model="form.mobile"
                         required
-                        placeholder="请输入邮箱地址"
+                        placeholder="请输入手机号码"
                 ></b-form-input>
             </b-form-group>
             <b-form-group
@@ -35,7 +34,7 @@
             >
                 <b-form-textarea
                         id="textarea"
-                        v-model="text"
+                        v-model="form.comment"
                         placeholder="请在这儿留言，你的意见对我们很重要"
                         rows="3"
                         max-rows="6"
@@ -48,23 +47,45 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         name: "Contact",
         data() {
             return {
                 form: {
-                    email: '',
                     name: '',
-                    text: ''
+                    mobile: '',
+                    comment: ''
                 },
-                foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
                 show: true
             }
         },
         methods: {
             onSubmit(evt) {
                 evt.preventDefault();
-                alert(JSON.stringify(this.form))
+                //alert(JSON.stringify(this.form))
+                axios.post('http://localhost:3000/sms', {
+                    name: this.form.name,
+                    mobile: this.form.mobile,
+                    comment: this.form.comment
+                })
+                    .then((res) => {
+                        if (!res.data.success) {
+                            if (res.data.errorCode === '0003') {
+                                this.errors.response = '手机号码还未注册，请尝试用其他号码登录, 或先注册。'
+                            } else if (res.data.errorCode === '0005') {
+                                this.errors.response = '验证码不正确，请重新输入或获取';
+                            }
+                            this.signinBtn.disabled = false;
+                        } else {
+                            this.errors.response = null;
+                            this.login({ token: res.data.token, uuid: res.data.uuid, activated: res.data.activated });
+                        }
+                    })
+                    .catch(function (err) {
+                        this.errors.response = '验证码不正确，请重新输入或获取';
+                        this.signinBtn.disabled = false;
+                    });
             },
             onReset(evt) {
                 evt.preventDefault();

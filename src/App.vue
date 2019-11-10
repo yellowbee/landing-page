@@ -3,10 +3,16 @@
     <Banner />
     <br />
     <br />
+    <Advocate />
+    <br />
+    <br />
     <Services />
     <br />
     <br />
     <DemoProjects />
+    <br />
+    <br />
+    <Customers />
     <br />
     <br />
     <Contact />
@@ -19,6 +25,8 @@ import Services from "./components/Services";
 import Banner from "./components/Banner";
 import Contact from "./components/Contact";
 import DemoProjects from "./components/DemoProjects";
+import Customers from "./components/Customers";
+import Advocate from "./components/Advocate";
 
 export default {
   name: "app",
@@ -26,7 +34,9 @@ export default {
     Banner,
     Services,
     Contact,
-    DemoProjects
+    DemoProjects,
+    Customers,
+    Advocate
   }
 };
 </script>

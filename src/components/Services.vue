@@ -86,6 +86,7 @@ export default {
 <style scoped>
 .header {
   font-size: 2rem;
+  visibility: hidden;
 }
 
 .service-container {
@@ -128,7 +129,6 @@ export default {
 @media (max-width: 767.98px) {
   .service {
     width: 100%;
-    padding: 0 0.5rem;
   }
 }
 </style>

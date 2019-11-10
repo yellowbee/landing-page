@@ -85,6 +85,7 @@ export default {
 <style scoped>
 .header {
   font-size: 2rem;
+  visibility: hidden;
 }
 
 .project-container {
@@ -105,7 +106,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 600px;
+  min-height: 600px;
   margin: 0.5rem;
   padding: 1rem;
   background: #f5f5f5;
@@ -129,6 +130,11 @@ export default {
 @media (max-width: 767.98px) {
   .project {
     width: 100%;
+    align-self: flex-start;
+  }
+
+  .project-box{
+    min-height: 20rem;
   }
 }
 </style>

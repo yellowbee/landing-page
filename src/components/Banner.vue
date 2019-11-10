@@ -1,19 +1,19 @@
 <template>
-  <div id="banner">
+  <div id="banner" v-scroll-reveal>
     <ul id="banner-menu">
-      <li class="menu-item">
+      <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
         <a href class="a_top_hypers">主页</a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
         <a href class="a_top_hypers">关于</a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
         <a href class="a_top_hypers">服务</a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
         <a href class="a_top_hypers">作品</a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
         <a href class="a_top_hypers">联系我们</a>
       </li>
     </ul>
@@ -22,11 +22,7 @@
       id="carousel-1"
       v-model="slide"
       :interval="0"
-      controls
-      indicators
       background="#ababab"
-      img-width="1024"
-      img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
@@ -55,7 +51,7 @@
             alt="image slot"
           />
         </template>
-      </b-carousel-slide> -->
+      </b-carousel-slide>-->
     </b-carousel>
 
     <!-- <p class="mt-4">
@@ -87,6 +83,8 @@ export default {
 <style scoped>
 #banner {
   position: relative;
+  min-height: 960px;
+  visibility: hidden;
 }
 #banner-menu {
   width: 100%;
@@ -104,6 +102,7 @@ export default {
 .menu-item {
   margin: 0 3%;
   display: inline-block;
+  visibility: hidden;
 }
 
 .text-big {
@@ -114,13 +113,14 @@ export default {
 }
 
 @media (max-width: 767.98px) {
-  .banner-text {
-  }
   .text-big {
     font-size: 1em;
   }
   .text-small {
     font-size: 0.5em;
+  }
+  #banner {
+    min-height: 235px;
   }
 }
 </style>

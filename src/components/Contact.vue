@@ -43,7 +43,7 @@
             </b-form-group>
 
             <div v-if="errors.response" class="err-msg">{{ errors.response }}</div>
-            <div v-if="submitSuccess" class="err-msg">{{ submitSuccess }}</div>
+            <div v-if="submitSuccess" class="success-msg">{{ submitSuccess }}</div>
             <b-button class="btn-form" squared type="submit" variant="outline-secondary">发送</b-button>
             <!-- <b-button class="btn-form" squared type="reset" variant="outline-secondary">重置</b-button> -->
         </b-form>
@@ -187,6 +187,9 @@ h6 {
 
 .err-msg {
     color: red;
+}
+.success-msg {
+    color: green;
 }
 
 @media (max-width: 767.98px) {

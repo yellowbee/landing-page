@@ -67,7 +67,7 @@
                     comment: null,
                     response: null
                 },
-                submitSuccess: false,
+                submitSuccess: null,
                 show: true
             }
         },
@@ -85,16 +85,23 @@
                         .then((res) => {
                             if (!res.data.success) {
                                 this.errors.response = '留言发送失败，请再尝试一次。'
+                                this.submitSuccess = null;
                             } else {
                                 this.submitSuccess = true;
                                 this.form.name = null;
                                 this.form.mobile = null;
                                 this.form.comment = null;
+                                this.errors.name = null;
+                                this.errors.mobile = null;
+                                this.errors.comment = null;
+                                this.errors.response = null;
+                                this.submitSuccess = '留言发送成功!'
                                 //this.login({ token: res.data.token, uuid: res.data.uuid, activated: res.data.activated });
                             }
                         })
                         .catch((err) => {
                             this.errors.response = '留言发送失败，请再尝试一次。'
+                            this.submitSuccess = null;
                         });
                 }
             },

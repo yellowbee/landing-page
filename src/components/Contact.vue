@@ -87,6 +87,9 @@
                                 this.errors.response = '留言发送失败，请再尝试一次。'
                             } else {
                                 this.submitSuccess = true;
+                                this.form.name = null;
+                                this.form.mobile = null;
+                                this.form.comment = null;
                                 //this.login({ token: res.data.token, uuid: res.data.uuid, activated: res.data.activated });
                             }
                         })

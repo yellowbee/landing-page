@@ -1,7 +1,7 @@
 <template>
     <!-- Footer -->
     <mdb-footer color="stylish-color-dark" class="page-footer font-small pt-4 mt-4">
-        <mdb-container class="text-left">
+        <mdb-container class="text-center">
             <mdb-row>
                 <mdb-col md="3">
                     <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">🐯智虎科技</h5>

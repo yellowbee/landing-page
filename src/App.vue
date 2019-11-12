@@ -16,7 +16,8 @@
     <br />
     <br />
     <Contact />
-    <div style="padding: 3rem 0;">footer</div>
+    <!-- <div style="padding: 3rem 0;">footer</div> -->
+    <Footer />
   </div>
 </template>
 
@@ -27,6 +28,7 @@ import Contact from "./components/Contact";
 import DemoProjects from "./components/DemoProjects";
 import Customers from "./components/Customers";
 import Advocate from "./components/Advocate";
+import Footer from "./components/Footer";
 
 export default {
   name: "app",
@@ -36,7 +38,8 @@ export default {
     Contact,
     DemoProjects,
     Customers,
-    Advocate
+    Advocate,
+    Footer
   }
 };
 </script>

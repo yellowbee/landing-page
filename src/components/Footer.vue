@@ -32,6 +32,7 @@
                         <li>邮件：beam@outlook.com</a></li>
                         <li>电话/微信： 554300112</li>
                     </ul>
+                    <img class="qrcode" src="../assets/footer/qrcode.png"/>
                 </mdb-col>
             </mdb-row>
         </mdb-container>
@@ -72,5 +73,10 @@
 }
 .page-footer {
     color: white;
+}
+
+.qrcode {
+    margin-top: 1rem;
+  height: 6rem;
 }
 </style>

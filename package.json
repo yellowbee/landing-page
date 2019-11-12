@@ -12,6 +12,7 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.4",
     "core-js": "^2.6.5",
+    "mdbvue": "^6.0.0",
     "scrollreveal": "^4.0.5",
     "url-join": "^4.0.1",
     "vue": "^2.6.10",

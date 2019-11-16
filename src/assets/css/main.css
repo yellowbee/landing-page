@@ -11,3 +11,7 @@ ul {
 .v-scroll-reveal {
   visibility: hidden;
 }
+
+body{
+  font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+}

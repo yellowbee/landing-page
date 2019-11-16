@@ -8,13 +8,15 @@
         v-for="(project,index) in projects"
         :key="index"
         v-scroll-reveal="{delay: index*100}"
+        :style="{order:project.order}"
       >
         <div
           class="project-box"
           :style="{
             backgroundImage: project.imageName && 'url('+project.imageName+'),url('+project.defaultImageName+')',
             backgroundPosition: 'center center',
-            backgroundRepeat:'no-repeat',}"
+            backgroundRepeat:'no-repeat',
+            }"
         >
           <div v-if="!project.isPlaceholder">
             <h2>{{project.title}}</h2>
@@ -72,12 +74,24 @@ const projects = [
 export default {
   name: "DemoProjects",
   data: () => ({
-    projects: projects.map(project => ({
-      ...project,
-      imageName:
-        project.imageName && require("../assets/projects/" + project.imageName),
-      defaultImageName: require("../assets/example-bg.png")
-    }))
+    projects: projects.map((project, index) => {
+      let order = index + 1;
+
+      if (order % 4 === 3) {
+        order += 1;
+      } else if (order % 4 === 0) {
+        order -= 1;
+      }
+
+      return {
+        ...project,
+        imageName:
+          project.imageName &&
+          require("../assets/projects/" + project.imageName),
+        defaultImageName: require("../assets/example-bg.png"),
+        order
+      };
+    })
   })
 };
 </script>
@@ -99,6 +113,7 @@ export default {
   display: flex;
   width: 50%;
   visibility: hidden;
+  background: #f5f5f5;
 }
 
 .project-box {
@@ -109,7 +124,6 @@ export default {
   min-height: 600px;
   margin: 0.5rem;
   padding: 1rem;
-  background: #f5f5f5;
   transition: all 0.75s ease 0s;
 }
 
@@ -117,23 +131,18 @@ export default {
   align-self: center;
 }
 
-.project:nth-child(odd) .project-box:hover {
-  background: #e3e1d3;
-  transform: scale(1.01);
-}
-
-.project:nth-child(even) .project-box:hover {
-  background: #e0cece;
-  transform: scale(1.01);
+.project:nth-child(2n) {
+  background: inherit;
 }
 
 @media (max-width: 767.98px) {
   .project {
     width: 100%;
     align-self: flex-start;
+    order: 1 !important;
   }
 
-  .project-box{
+  .project-box {
     min-height: 20rem;
   }
 }

@@ -1,23 +1,26 @@
 <template>
   <div class="banner" v-scroll-reveal>
     <img src="../assets/banner/tiger.jpg" />
-    <ul class="banner-menu">
-      <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
-        <a href class="a_top_hypers">主页</a>
-      </li>
-      <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
-        <a href class="a_top_hypers">关于</a>
-      </li>
-      <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
-        <a href class="a_top_hypers">服务</a>
-      </li>
-      <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
-        <a href class="a_top_hypers">作品</a>
-      </li>
-      <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
-        <a href class="a_top_hypers">联系我们</a>
-      </li>
-    </ul>
+    <nav>
+      <img class="ml-2" src="../assets/banner/logo.png" />
+      <ul class="banner-menu">
+        <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
+          <a href class="a_top_hypers">主页</a>
+        </li>
+        <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
+          <a href class="a_top_hypers">关于</a>
+        </li>
+        <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
+          <a href class="a_top_hypers">服务</a>
+        </li>
+        <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
+          <a href class="a_top_hypers">作品</a>
+        </li>
+        <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
+          <a href class="a_top_hypers">联系我们</a>
+        </li>
+      </ul>
+    </nav>
     <div class="banner-desc" v-scroll-reveal>
       <div class="text-big">洞悉用户需求，结合前沿技术 --- 助您成功完成数字化转型</div>
       <br />
@@ -56,18 +59,23 @@ export default {
 .banner {
   position: relative;
   color: #fff;
+  min-height: 358px;
 }
 
-.banner img {
+.banner > img {
   width: 100%;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  top: 10%;
 }
 
 .banner-menu {
-  width: 100%;
-  z-index: 100;
-  position: absolute;
-  top: 10%;
-  right: 10%;
+  flex: 1;
   text-align: right;
 }
 
@@ -75,6 +83,7 @@ export default {
   color: white;
   font-size: small;
 }
+
 .menu-item {
   margin: 0 3%;
   display: inline-block;
@@ -112,8 +121,8 @@ export default {
     display: none;
     font-size: 0.5em;
   }
-  #banner {
-    min-height: 235px;
+  .banner {
+    min-height: 180px;
   }
 }
 </style>

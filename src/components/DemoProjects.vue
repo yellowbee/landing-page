@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="header mb-4" v-scroll-reveal>案例展示</h2>
+    <h2 class="header" v-scroll-reveal>案例展示</h2>
     <br />
     <ul class="project-container">
       <li
@@ -13,16 +13,15 @@
         <div
           class="project-box"
           :style="{
-            backgroundImage: project.imageName && 'url('+project.imageName+'),url('+project.defaultImageName+')',
+            backgroundImage: project.imageName && 'url('+project.imageName+')',
             backgroundPosition: 'center center',
             backgroundRepeat:'no-repeat',
+            backgroundSize: 'contain',
             }"
         >
           <div v-if="!project.isPlaceholder">
-            <h2>{{project.title}}</h2>
-            <br />
+            <h3>{{project.title}}</h3>
             <p>{{project.content}}</p>
-            <br />
             <button class="btn btn-link demo-project__more">了解更多 &gt;</button>
           </div>
         </div>
@@ -34,7 +33,7 @@
 <script>
 const projects = [
   {
-    imageName: "project-1.jpg",
+    imageName: "project-1.png",
     title: "",
     content: "",
     isPlaceholder: true
@@ -46,7 +45,7 @@ const projects = [
       "摩根大通银行 CXO （Chase Commercial/Personal Online-banking）应用系统摩根大通Chase银行是全球500强企业，在全球银行系统中排前10名。CXO是摩根大通旗下Chase银行的商用和个人网上银行系统，主要是实现用户在网上进行各种金融操作，比如银行账号管理，信用卡管理，投资服务，支付服务等等。我门团队在这个项目中提供前端UI开发和后端Web Service的开发服务。使用到的技术主要是：HTML/CSS/JavaScript, ReactJS, 以及NodeJS。"
   },
   {
-    imageName: "project-2.jpg",
+    imageName: "project-2.png",
     title: "",
     content: "",
     isPlaceholder: true
@@ -58,7 +57,7 @@ const projects = [
       "eHealth是一家从事医疗保险销售服务的跨国公司。我们主要提供前端eCommerce web application的开发和后端Web Service的开发与维护。e Heath LSS是用来给Lead（潜在用户）进行打分的系统，是用机器学习的训练好的模型对用户进行潜在商业价值的打分。使用到的技术主要是：python和python相关的机器学习的软件包。"
   },
   {
-    imageName: "project-3.jpg",
+    imageName: "project-3.png",
     title: "",
     content: "",
     isPlaceholder: true
@@ -98,7 +97,6 @@ export default {
 
 <style scoped>
 .header {
-  font-size: 2rem;
   visibility: hidden;
 }
 
@@ -106,7 +104,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin-top: -1rem;
-  padding: 0 0.5rem;
 }
 
 .project {

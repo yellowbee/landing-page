@@ -1,7 +1,6 @@
 <template>
   <section>
-    <h2 class="header mb-4" v-scroll-reveal>我们提供如下服务</h2>
-    <br/>
+    <h2 class="header" v-scroll-reveal>我们提供如下服务</h2>
     <ul class="service-container">
       <li
         class="service"
@@ -10,9 +9,8 @@
         v-scroll-reveal="{delay: index*100}"
       >
         <div class="service-box">
-          <img :src="service.imageName" width="100" :alt="service.title" />
-          <br />
-          <h2>{{service.title}}</h2>
+          <img class="service-img" :src="service.imageName" width="60" :alt="service.title" />
+          <h3>{{service.title}}</h3>
           <p>{{service.content}}</p>
         </div>
       </li>
@@ -85,15 +83,17 @@ export default {
 
 <style scoped>
 .header {
-  font-size: 2rem;
   visibility: hidden;
+}
+
+.service-img {
+  margin-bottom: 0.5rem;
 }
 
 .service-container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -1rem;
-  padding: 0 0.5rem;
+  margin: 0 -0.5rem;
 }
 
 .service {

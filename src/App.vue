@@ -1,21 +1,23 @@
 <template>
   <div id="app">
     <SingleBanner />
-    <br />
-    <br />
-    <Advocate />
-    <br />
-    <br />
-    <Services />
-    <br />
-    <br />
-    <DemoProjects />
-    <br />
-    <br />
-    <Customers />
-    <br />
-    <br />
-    <Contact />
+    <main>
+      <section>
+        <Advocate />
+      </section>
+      <section>
+        <Services />
+      </section>
+      <section>
+        <DemoProjects />
+      </section>
+      <section>
+        <Customers />
+      </section>
+      <section>
+        <Contact />
+      </section>
+    </main>
     <Footer />
   </div>
 </template>
@@ -49,5 +51,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+main > section {
+  margin-top: 4rem;
+}
+
+main {
+  margin: 0rem 1rem;
 }
 </style>

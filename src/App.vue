@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Banner />
+    <SingleBanner />
     <br />
     <br />
     <Advocate />
@@ -16,14 +16,13 @@
     <br />
     <br />
     <Contact />
-    <!-- <div style="padding: 3rem 0;">footer</div> -->
     <Footer />
   </div>
 </template>
 
 <script>
 import Services from "./components/Services";
-import Banner from "./components/Banner";
+import SingleBanner from "./components/SingleBanner";
 import Contact from "./components/Contact";
 import DemoProjects from "./components/DemoProjects";
 import Customers from "./components/Customers";
@@ -33,7 +32,7 @@ import Footer from "./components/Footer";
 export default {
   name: "app",
   components: {
-    Banner,
+    SingleBanner,
     Services,
     Contact,
     DemoProjects,

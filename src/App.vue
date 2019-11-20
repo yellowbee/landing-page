@@ -1,29 +1,30 @@
 <template>
   <div id="app">
-    <Banner />
-    <br />
-    <br />
-    <Advocate />
-    <br />
-    <br />
-    <Services />
-    <br />
-    <br />
-    <DemoProjects />
-    <br />
-    <br />
-    <Customers />
-    <br />
-    <br />
-    <Contact />
-    <!-- <div style="padding: 3rem 0;">footer</div> -->
+    <SingleBanner />
+    <main>
+      <section>
+        <Advocate />
+      </section>
+      <section>
+        <Services />
+      </section>
+      <section>
+        <DemoProjects />
+      </section>
+      <section>
+        <Customers />
+      </section>
+      <section>
+        <Contact />
+      </section>
+    </main>
     <Footer />
   </div>
 </template>
 
 <script>
 import Services from "./components/Services";
-import Banner from "./components/Banner";
+import SingleBanner from "./components/SingleBanner";
 import Contact from "./components/Contact";
 import DemoProjects from "./components/DemoProjects";
 import Customers from "./components/Customers";
@@ -33,7 +34,7 @@ import Footer from "./components/Footer";
 export default {
   name: "app",
   components: {
-    Banner,
+    SingleBanner,
     Services,
     Contact,
     DemoProjects,
@@ -46,10 +47,17 @@ export default {
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+main > section {
+  margin-top: 4rem;
+}
+
+main {
+  margin: 0rem 1rem;
 }
 </style>

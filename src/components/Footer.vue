@@ -29,10 +29,10 @@
                 <mdb-col md="3">
                     <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">联系我们</h5>
                     <ul class="list-unstyled">
-                        <li>邮件：beam@outlook.com</a></li>
+                        <li>邮件：beam@outlook.com</li>
                         <li>电话/微信： 554300112</li>
                     </ul>
-                    <img class="qrcode" src="../assets/footer/qrcode.png"/>
+                    <img class="qrcode" src="../assets/footer/zhihu-qrcode.png"/>
                 </mdb-col>
             </mdb-row>
         </mdb-container>
@@ -77,6 +77,6 @@
 
 .qrcode {
     margin-top: 1rem;
-  height: 6rem;
+    height: 6rem;
 }
 </style>

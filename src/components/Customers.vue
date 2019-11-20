@@ -1,7 +1,6 @@
 <template>
   <section>
-    <h2 class="header mb-4" v-scroll-reveal>我们的客户</h2>
-    <br />
+    <h2 class="header" v-scroll-reveal>我们的客户</h2>
     <ul>
       <li v-for="(customer,index) in customers" :key="index" v-scroll-reveal="{delay: index*100}">
         <div
@@ -43,8 +42,8 @@ const customers = [
     name: "中节能"
   },
   {
-    imageName: "china-eco.png",
-    name: "财务分析"
+    imageName: "ren-ming.png",
+    name: "人民大学"
   }
 ];
 
@@ -63,7 +62,6 @@ export default {
 
 <style scoped>
 .header {
-  font-size: 2rem;
   visibility: hidden;
 }
 

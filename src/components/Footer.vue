@@ -40,7 +40,7 @@
             <li>邮件：beam@outlook.com</li>
             <li>电话/微信： 554300112</li>
           </ul>
-          <img class="qrcode" src="../assets/footer/qrcode.png" />
+          <img class="qrcode" src="../assets/footer/zhihu-qrcode.png" />
         </mdb-col>
       </mdb-row>
     </mdb-container>

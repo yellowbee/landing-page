@@ -1,5 +1,6 @@
 <template>
   <div class="contact-container">
+    <a name="contact"/>
     <div class="title" v-scroll-reveal="{origin:'right'}">
       <h2 class="header">联系我们</h2>
       <h6>hi, 很高兴认识你: )</h6>

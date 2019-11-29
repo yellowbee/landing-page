@@ -2,9 +2,9 @@
   <div id="app">
     <SingleBanner />
     <main>
-      <section>
+      <!-- <section>
         <Advocate />
-      </section>
+      </section> -->
       <section>
         <Services />
       </section>

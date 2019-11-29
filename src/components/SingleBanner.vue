@@ -1,8 +1,11 @@
 <template>
   <div class="banner" v-scroll-reveal>
-    <img src="../assets/banner/tiger.jpg" />
-    <nav>
-      <img class="ml-2" src="../assets/banner/logo.png" />
+    <img class="img-desktop" src="../assets/banner/tiger.jpg" />
+    <img class="img-mb" src="../assets/banner/tiger-mb.png" />
+    <nav class="nav">
+      <div class="logo-wrapper">
+      <img class="ml-2" src="../assets/banner/tigerai-logo.png" />
+      </div>
       <ul class="banner-menu">
         <li class="menu-item" v-scroll-reveal="{origin: 'left'}">
           <a href class="a_top_hypers">主页</a>
@@ -24,7 +27,7 @@
     <div class="banner-desc" v-scroll-reveal>
       <div class="text-big">洞悉用户需求，结合前沿技术 --- 助您成功完成数字化转型</div>
       <br />
-      <div class="text-small">我们致力于为中国制造2025提供专业数字产品开发服务</div>
+      <div class="text-small">我们致力于为工业4.0提供专业数字产品开发服务</div>
     </div>
     <a class="toContent" href="#advocate" v-scroll-reveal="{origin: 'right'}">
       <svg fill="white" id="icon-scroll-arrow" viewBox="0 0 32 32">
@@ -64,6 +67,13 @@ export default {
 
 .banner > img {
   width: 100%;
+}
+.logo-wrapper {
+  width: 20%;
+}
+
+.img-mb {
+  display: none;
 }
 
 nav {
@@ -114,15 +124,36 @@ nav {
   margin: 0 auto;
 }
 @media (max-width: 767.98px) {
+  .nav {
+    top: 1%;
+  }
+
   .text-big {
     font-size: 1em;
   }
   .text-small {
-    display: none;
-    font-size: 0.5em;
+    #display: none;
+    font-size: 0.6em;
+    font-style: italic;
   }
   .banner {
     min-height: 180px;
+  }
+
+  .img-desktop {
+    display: none;
+  }
+
+  .img-mb {
+    display: block;
+  }
+
+  .banner-desc {
+    left: 8%;
+    right: 8%;
+    bottom: 45%;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 }
 </style>

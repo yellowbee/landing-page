@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <div id="demoProjects">
     <h2 class="header" v-scroll-reveal>案例展示</h2>
     <br />
     <ul class="project-container">
@@ -27,7 +27,7 @@
         </div>
       </li>
     </ul>
-  </section>
+  </div>
 </template>
 
 <script>

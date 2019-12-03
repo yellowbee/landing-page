@@ -4,7 +4,7 @@
     <main>
       <!-- <section>
         <Advocate />
-      </section> -->
+      </section>-->
       <section>
         <Services />
       </section>
@@ -20,6 +20,10 @@
     </main>
     <Footer />
   </div>
+
+  <!-- <div
+      style="position:absolute; top: 0; left: 0; width: 100vw; height: 100vh; background:red; z-index:1000;"
+  ></div>-->
 </template>
 
 <script>
@@ -51,6 +55,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow: hidden;
 }
 
 main > section {

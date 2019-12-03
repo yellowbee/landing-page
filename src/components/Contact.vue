@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-container">
+  <div id="contact" class="contact-container">
     <a name="contact"/>
     <div class="title" v-scroll-reveal="{origin:'right'}">
       <h2 class="header">联系我们</h2>

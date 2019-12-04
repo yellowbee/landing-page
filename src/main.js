@@ -1,3 +1,4 @@
+import "./polyfill";
 import Vue from 'vue';
 import { BCarousel } from 'bootstrap-vue';
 import { BCarouselSlide } from 'bootstrap-vue';

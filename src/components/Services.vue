@@ -128,6 +128,10 @@ export default {
   transform: translateX(0px) translateY(0px);
 }
 
+.service-box p {
+  align-self: stretch;
+}
+
 .service:nth-child(odd) .service-box:hover {
   background: #e3e1d3;
   transform: scale(1.02);

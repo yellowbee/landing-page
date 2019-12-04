@@ -45,6 +45,18 @@ export default {
     Customers,
     Advocate,
     Footer
+  },
+  mounted: function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        document.querySelector(href).scrollIntoView({
+          behavior: "smooth"
+        });
+        window.history.pushState(null, null, href);
+      });
+    });
   }
 };
 </script>

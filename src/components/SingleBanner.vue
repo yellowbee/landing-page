@@ -3,7 +3,7 @@
     <img class="img-desktop" src="../assets/banner/tiger.jpg" />
     <img class="img-mb" src="../assets/banner/tiger-mb.png" />
     <div class="mobile-header">
-      <img src="../assets/banner/tigerai-logo.png" />
+      <!-- <img src="../assets/banner/tigerai-logo.png" /> -->
       <button class="btn" @click="onMenuClick">
         <HamburgerIcon style="fill: white;" />
       </button>
@@ -11,8 +11,8 @@
     <nav ref="nav" :class="['nav',{active:!toggleMenu}]" @click="onNavClick">
       <div class="nav-content" @click="onNavContentClick">
         <div class="logo-wrapper">
-          <img class="nav-logo ml-2" src="../assets/banner/tigerai-logo.png" />
-          <img class="nav-logo-mobile ml-2" src="../assets/banner/tigerai-logo-black.png" />
+          <!-- <img class="nav-logo ml-2" src="../assets/banner/tigerai-logo.png" /> -->
+          <!-- <img class="nav-logo-mobile ml-2" src="../assets/banner/tigerai-logo-black.png" /> -->
         </div>
         <ul class="banner-menu">
           <li @click="onMenuItemClick">
@@ -34,9 +34,9 @@
       </div>
     </nav>
     <div class="banner-desc" v-scroll-reveal>
-      <div class="text-big">洞悉用户需求，结合前沿技术 --- 助您成功完成数字化转型</div>
+      <div class="text-big">昆仑的作品集</div>
       <br />
-      <div class="text-small">我们致力于为工业4.0提供专业数字产品开发服务</div>
+      <div class="text-small">欢迎来到昆仑的个人网站</div>
     </div>
     <a class="toContent" href="#services" v-scroll-reveal="{origin: 'right'}">
       <svg fill="white" id="icon-scroll-arrow" viewBox="0 0 32 32">

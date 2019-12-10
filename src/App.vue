@@ -12,7 +12,7 @@
         <DemoProjects />
       </section>
       <section>
-        <Customers />
+        <!-- <Customers /> -->
       </section>
       <section>
         <Contact />

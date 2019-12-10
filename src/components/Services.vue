@@ -1,12 +1,12 @@
 <template>
   <div id="services">
-    <h2 class="header" v-scroll-reveal>我们提供如下服务</h2>
+    <h2 class="header" v-scroll-reveal>您好</h2>
     <p
       class="ml-2 mr-2"
       v-scroll-reveal
-    >作为一个有着十年以上咨询服务经验的团队，我们专注于像企业提供数字化咨询服务。我们的服务客户包括 J.P. 摩根大通银行，通用汽车公司，福特汽车公司，以及中国节能环保集团，戴尔科技集团（中国）。</p>
+    >我叫刘昆仑， 是一名设计师</p>
     <a href="#contact">
-      <b-button class="btn-form" squared type="submit" variant="outline-secondary">联系我们</b-button>
+      <b-button class="btn-form" squared type="submit" variant="outline-secondary">联系我</b-button>
     </a>
     <ul class="service-container">
       <li

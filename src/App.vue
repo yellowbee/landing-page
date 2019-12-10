@@ -6,7 +6,7 @@
         <Advocate />
       </section>-->
       <section>
-        <Services />
+        <!-- <Services /> -->
       </section>
       <section>
         <DemoProjects />

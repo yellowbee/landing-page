@@ -22,13 +22,10 @@
             <a href="#services" class="a_top_hypers">关于</a>
           </li>
           <li @click="onMenuItemClick">
-            <a href="#services" class="a_top_hypers">服务</a>
-          </li>
-          <li @click="onMenuItemClick">
             <a href="#demoProjects" class="a_top_hypers">作品</a>
           </li>
           <li @click="onMenuItemClick">
-            <a href="#contact" class="a_top_hypers">联系我们</a>
+            <a href="#contact" class="a_top_hypers">联系我</a>
           </li>
         </ul>
       </div>

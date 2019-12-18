@@ -3,7 +3,7 @@
     <img class="img-desktop" src="../assets/banner/tiger.jpg" />
     <img class="img-mb" src="../assets/banner/tiger-mb.png" />
     <div class="mobile-header">
-      <img src="../assets/banner/tigerai-logo.png" />
+      <WitigerLogoIcon style="fill: white; width: 168px;" />
       <button class="btn" @click="onMenuClick">
         <HamburgerIcon style="fill: white;" />
       </button>
@@ -11,21 +11,20 @@
     <nav ref="nav" :class="['nav',{active:!toggleMenu}]" @click="onNavClick">
       <div class="nav-content" @click="onNavContentClick">
         <div class="logo-wrapper">
-          <img class="nav-logo ml-2" src="../assets/banner/tigerai-logo.png" />
-          <img class="nav-logo-mobile ml-2" src="../assets/banner/tigerai-logo-black.png" />
+          <WitigerLogoIcon class="nav-logo ml-2" />
         </div>
         <ul class="banner-menu">
-          <li @click="onMenuItemClick">
+          <!-- <li @click="onMenuItemClick">
             <a href="#" class="a_top_hypers">主页</a>
-          </li>
+          </li>-->
           <li @click="onMenuItemClick">
-            <a href="#services" class="a_top_hypers">关于</a>
+            <a href="#services" class="a_top_hypers">我们的服务</a>
           </li>
-          <li @click="onMenuItemClick">
+          <!-- <li @click="onMenuItemClick">
             <a href="#services" class="a_top_hypers">服务</a>
-          </li>
+          </li>-->
           <li @click="onMenuItemClick">
-            <a href="#demoProjects" class="a_top_hypers">作品</a>
+            <a href="#demoProjects" class="a_top_hypers">我们的作品</a>
           </li>
           <li @click="onMenuItemClick">
             <a href="#contact" class="a_top_hypers">联系我们</a>
@@ -50,6 +49,8 @@
 
 <script>
 import HamburgerIcon from "../assets/svg/menu-hamburger.svg";
+import WitigerLogoIcon from "../assets/svg/witiger-logo.svg";
+
 export default {
   data() {
     return {
@@ -77,7 +78,8 @@ export default {
     }
   },
   components: {
-    HamburgerIcon
+    HamburgerIcon,
+    WitigerLogoIcon
   }
 };
 </script>
@@ -128,6 +130,11 @@ export default {
   color: white;
 }
 
+.nav-logo {
+  fill: white;
+  width: 168px;
+}
+
 .banner-menu {
   flex: 1;
   text-align: right;
@@ -161,10 +168,6 @@ export default {
   margin: 0 auto;
 }
 
-.nav-logo-mobile {
-  display: none;
-}
-
 @media (max-width: 767.98px) {
   .mobile-header {
     display: flex;
@@ -173,7 +176,7 @@ export default {
     padding: 0 1rem;
     position: absolute;
     width: 100%;
-    top: 10%;
+    top: 5%;
   }
 
   .logo-wrapper {
@@ -182,11 +185,7 @@ export default {
   }
 
   .nav-logo {
-    display: none;
-  }
-
-  .nav-logo-mobile {
-    display: block;
+    fill: #394f5b;
   }
 
   .nav {

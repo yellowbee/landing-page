@@ -85,12 +85,12 @@ ul li {
 }
 
 li:nth-child(odd) .customer:hover {
-  background: #e3e1d3;
+  background: #DFF1FB;
   transform: scale(1.05);
 }
 
 li:nth-child(even) .customer:hover {
-  background: #e0cece;
+  background: #DAE2FD;
   transform: scale(1.05);
 }
 </style>

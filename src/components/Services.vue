@@ -5,9 +5,9 @@
       class="ml-2 mr-2"
       v-scroll-reveal
     >作为一个有着十年以上咨询服务经验的团队，我们专注于像企业提供数字化咨询服务。我们的服务客户包括 J.P. 摩根大通银行，通用汽车公司，福特汽车公司，以及中国节能环保集团，戴尔科技集团（中国）。</p>
-    <a href="#contact">
+    <!-- <a href="#contact">
       <b-button class="btn-form" squared type="submit" variant="outline-secondary">联系我们</b-button>
-    </a>
+    </a>-->
     <ul class="service-container">
       <li
         class="service"
@@ -133,12 +133,12 @@ export default {
 }
 
 .service:nth-child(odd) .service-box:hover {
-  background: #e3e1d3;
+  background: #DFF1FB;
   transform: scale(1.02);
 }
 
 .service:nth-child(even) .service-box:hover {
-  background: #e0cece;
+  background: #DAE2FD;
   transform: scale(1.02);
 }
 

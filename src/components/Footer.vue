@@ -11,16 +11,13 @@
           <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">菜单</h5>
           <ul class="list-unstyled">
             <li>
-              <a href="#!">主页</a>
+              <a href="#banner">主页</a>
             </li>
             <li>
-              <a href="#!">关于</a>
+              <a href="#services">服务</a>
             </li>
             <li>
-              <a href="#!">服务</a>
-            </li>
-            <li>
-              <a href="#!">案例</a>
+              <a href="#demoProjects">作品</a>
             </li>
           </ul>
         </mdb-col>
@@ -76,7 +73,7 @@
       </ul>
     </div>
     <div class="footer-copyright text-center py-3">
-      <mdb-container fluid>&copy; 2019 Copyright: Tiger AI</mdb-container>
+      <mdb-container fluid>&copy; 2019 Copyright: Witiger Co. Ltd</mdb-container>
     </div>
   </mdb-footer>
   <!-- Footer -->

@@ -1,5 +1,5 @@
 <template>
-  <div class="banner" v-scroll-reveal>
+  <div id="banner" class="banner" v-scroll-reveal>
     <img class="img-desktop" src="../assets/banner/tiger.jpg" />
     <img class="img-mb" src="../assets/banner/tiger-mb.png" />
     <div class="mobile-header">

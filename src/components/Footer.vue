@@ -1,10 +1,10 @@
 <template>
   <!-- Footer -->
-  <mdb-footer color="stylish-color-dark" class="page-footer font-small pt-4 mt-4">
+  <mdb-footer color="stylish-color-dark" class="page-footer font-small pt-4">
     <mdb-container class="text-center">
       <mdb-row>
         <mdb-col class="footer-logo" md="3">
-          <img src="../assets/banner/logo.png" alt="智虎科技" />
+          <WitigerLogoIcon style="fill: white; width: 168px;" />
         </mdb-col>
         <hr class="clearfix w-100 d-md-none" />
         <mdb-col md="3">
@@ -28,17 +28,19 @@
         <mdb-col md="3">
           <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">地址</h5>
           <ul class="list-unstyled">
-            <li>北京市昌平区</li>
-            <li>龙泽苑东区</li>
-            <li>5号楼 2-602</li>
+            <li>北京市海淀区</li>
+            <li>学院路20号</li>
           </ul>
         </mdb-col>
         <hr class="clearfix w-100 d-md-none" />
         <mdb-col md="3">
           <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">联系我们</h5>
           <ul class="list-unstyled">
-            <li>邮件：beam@outlook.com</li>
-            <li>电话/微信： 554300112</li>
+            <li>
+              邮件：
+              <a href="mailto:liukunlun@outlook.com">liukunlun@outlook.com</a>
+            </li>
+            <li>电话/微信： 17610081155</li>
           </ul>
           <img class="qrcode" src="../assets/footer/zhihu-qrcode.png" />
         </mdb-col>
@@ -82,13 +84,16 @@
 
 <script>
 import { mdbFooter, mdbContainer, mdbRow, mdbCol } from "mdbvue";
+import WitigerLogoIcon from "../assets/svg/witiger-logo.svg";
+
 export default {
   name: "Footer",
   components: {
     mdbFooter,
     mdbContainer,
     mdbRow,
-    mdbCol
+    mdbCol,
+    WitigerLogoIcon
   }
 };
 </script>
@@ -116,6 +121,7 @@ h5 {
 }
 .page-footer {
   color: white;
+  margin-top: 4rem !important;
 }
 
 .qrcode {

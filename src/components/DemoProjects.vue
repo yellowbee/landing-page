@@ -22,7 +22,7 @@
           <div v-if="!project.isPlaceholder">
             <h3>{{project.title}}</h3>
             <p>{{project.content}}</p>
-            <button class="btn btn-link demo-project__more">了解更多 &gt;</button>
+            <a class="btn btn-link demo-project__more" href="#contact" role="button">了解更多 &gt;</a>
           </div>
         </div>
       </li>
